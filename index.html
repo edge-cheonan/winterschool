@@ -436,7 +436,7 @@ var groups=[
 var els=[];
 groups.forEach(function(g){
  [].slice.call(document.querySelectorAll(g[0])).forEach(function(el,i){
-  if(el.classList.contains('rv'))return;
+  if(el.classList.contains('rv')||el.closest('#time'))return;
   el.classList.add('rv');
   if(g[0]==='.gal figure'||g[0]==='.ev')el.classList.add('z');
   el.style.setProperty('--d',(g[1]?Math.min(i,5)*0.09:0)+'s');
